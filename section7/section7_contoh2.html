@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Program Handling Events dalam Satu Use Case</title>
+</head>
+<body>
+	<button id="tombol1">Klik untuk menambah</button>
+	<p id="hasil1">0</p>
+
+	<button id="tombol2">Klik untuk merubah warna latar belakang</button>
+	<p id="hasil2">Latar belakang saat ini: putih</p>
+
+	<script>
+		// Menambahkan event listener untuk tombol1
+		const tombol1 = document.getElementById("tombol1");
+		const hasil1 = document.getElementById("hasil1");
+		let jumlah = 0;
+		tombol1.addEventListener("click", function() {
+			jumlah++;
+			hasil1.innerHTML = jumlah;
+		});
+
+		// Menambahkan event listener untuk tombol2
+		const tombol2 = document.getElementById("tombol2");
+		const hasil2 = document.getElementById("hasil2");
+		let warna = "putih";
+		tombol2.addEventListener("click", function() {
+			if (warna === "putih") {
+				document.body.style.backgroundColor = "lightblue";
+				hasil2.innerHTML = "Latar belakang saat ini: lightblue";
+				warna = "lightblue";
+			} else {
+				document.body.style.backgroundColor = "white";
+				hasil2.innerHTML = "Latar belakang saat ini: putih";
+				warna = "putih";
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- contoh 1 -->
+<html>
+<head>
+	<title>Contoh Program createElement() dalam Satu Use Case</title>
+</head>
+<body>
+	<div id="container"></div>
+
+	<script>
+		// Membuat elemen HTML baru
+		const p = document.createElement("p");
+
+		// Menambahkan konten ke dalam elemen HTML baru
+		p.innerHTML = "Ini adalah contoh program createElement() dalam satu use case.";
+
+		// Menambahkan elemen HTML baru ke dalam container
+		const container = document.getElementById("container");
+		container.appendChild(p);
+	</script>
+</body>
+</html>
